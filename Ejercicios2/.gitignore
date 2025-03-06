@@ -1,0 +1,38 @@
+# Archivos y carpetas de dependencias
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+*.dist-info/
+
+# Archivos de configuración y entornos virtuales
+pip-log.txt
+pip-delete-this-directory.txt
+*.env
+.env
+*.venv
+
+# Archivos de compilación y caché
+*.swp
+*.swo
+*.bak
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Configuración específica de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Configuración de Docker y otros entornos
+docker-compose.override.yml
