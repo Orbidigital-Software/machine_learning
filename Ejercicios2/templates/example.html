@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de uso</title> 
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            min-height: 200vh; /* Asegura suficiente altura para el scroll */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">grupo #11 </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"></ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <h1 class="mt-5">casos de uso</h1>
+        <h2>Plataforma de Noticias Personalizadas con IA Supervisada<br><br></h2>
+        <p class="lead"></p>
+    </div>
+    <div class>
+        <h2 class="text-center">Descripcion general</h2>
+        <p class="lead">La plataforma utiliza un modelo de aprendizaje supervisado para filtrar y recomendar noticias a los usuarios con base en sus preferencias, historial de lectura y relevancia de las fuentes. El sistema aprende de las interacciones previas para mejorar continuamente la personalización de los artículos mostrados.</p>
+    </div>
+    <div class="">
+        <h2 class="text-center">Actores Involucrados</h2>
+        <p class="lead">Usuario Final, </p>
+        <p class="lead">Administrador de la plataforma,</p>
+            <p class="lead">Modelo de IA supervisado,</p>
+            <p class="lead">API de fuentes de noticias...</p>
+    </div>
+        <h2 class="text-center">Flujo de Interacción</h2>
+        <p class="lead">1️⃣ Registro y Personalización Inicial
+
+            El usuario crea una cuenta e indica sus intereses (Ej: tecnología, economía, deportes).</p>
+            
+            <p class="lead">1. Usuario ingresa sus preferencias iniciales.</p>
+            
+                <p class="lead">2. El sistema etiqueta los intereses y los asocia a categorías de noticias.</p>
+            
+                    <p class="lead">3. Se genera un primer feed de noticias basado en estos intereses.</p>
+            
+        <p class="lead">2️⃣ Clasificación y Entrenamiento del Modelo
+            
+            El sistema usa un modelo supervisado entrenado con noticias previamente clasificadas por expertos.</p>
+            
+           <p class="lead"> 1. Cada noticia tiene etiquetas preasignadas (Ej: "política", "deportes", "economía").</p>
+            
+           <p class="lead"> 2. El modelo aprende a clasificar nuevas noticias basándose en estas etiquetas.</p>
+            
+           <p class="lead">3. Se usa una base de datos con noticias previamente clasificadas para mejorar la precisión del sistema.</p>
+            
+           <p class="lead">3️⃣ Interacción con Noticias y Aprendizaje Continuo
+            
+            Cada acción del usuario (leer, dar "me gusta", compartir, ignorar) ayuda al modelo a mejorar la personalización.</p>
+            
+            <p class="lead"> 1. Usuario lee o interactúa con una noticia.
+            
+                <p class="lead">2. El sistema registra esta acción y ajusta futuras recomendaciones.
+            
+                    <p class="lead">3. Si el usuario descarta una noticia, el sistema ajusta el modelo para evitar contenido irrelevante.
+            
+                        <p class="lead">4️⃣ Recomendaciones Dinámicas en Tiempo Real
+            
+            El modelo refina las sugerencias según patrones detectados en el comportamiento del usuario.</p>
+            
+            <p class="lead">1. Se actualiza el feed del usuario en función de sus interacciones recientes.</p>
+            
+                <p class="lead"> 2. Se priorizan noticias con alta probabilidad de interés según su perfil.</p>
+            
+                    <p class="lead">3. Se evitan sesgos informativos sugiriendo contenido diverso dentro de la misma categoría.</p>
+            
+                        <p class="lead">5️⃣ Administración de Contenido y Moderación
+            
+            El administrador revisa la calidad y autenticidad de las noticias en el sistema.</p>
+            
+            <p class="lead">1. Los administradores pueden marcar noticias como falsas o irrelevantes.
+            
+                <p class="lead">2. El sistema aprende a detectar patrones en noticias falsas y ajusta su modelo.<br><br></p>
+
+        <h2 class="text-center">Consideraciones Técnicas</h2>
+        <p class="lead">📌 Tecnologías a Utilizar
+
+            · Frontend: React.js / Next.js para la interfaz de usuario.
+            
+            · Backend: Node.js con Express.js para la gestión de API y base de datos.
+            
+            · Base de Datos: MongoDB para almacenamiento de usuarios y noticias.
+            
+            · IA y Machine Learning: Python con TensorFlow/PyTorch para entrenar el modelo supervisado.
+            
+            · APIs Externas: Integración con Google News, RSS feeds de periódicos y verificadores de noticias falsas.
+            
+            <p class="lead">📌 Algoritmo de Aprendizaje Supervisado
+            
+            · Modelo: Random Forest, Support Vector Machines (SVM) o Redes Neuronales.
+            
+            · Entrenamiento: Dataset de noticias etiquetadas previamente.
+            
+            · Entrada: Texto de noticias, historial de usuario, etiquetas preasignadas.
+            
+            · Salida: Recomendaciones de noticias relevantes para cada usuario.</p>
+            
+            <p class="lead">📌 Medidas de Seguridad
+            
+            · Protección contra noticias falsas: Implementación de modelos de detección de fake news.
+            
+            · Privacidad de datos: Cifrado de información del usuario y cumplimiento con GDPR.
+            
+            · Evitar sesgos en IA: Uso de datasets diversos y ajuste de pesos en las categorías.</p>    
+        <h2 class="text-center">Beneficios del Sistema</h2>
+        <p class="lead">Noticias personalizadas sin sobrecarga de información.
+             <p class="lead">Aprendizaje continuo basado en interacciones del usuario.</p> 
+            <p class="lead">Evita la propagació cn de fake news mediante validación automatizada.</p>
+            <p class="lead">mejora la experiencia del usuario y aumenta el engagement con la plataforma.</p>
+        </div>
+    
+    <!-- Botón para volver arriba -->
+    <button id="scrollTopBtn" class="btn btn-primary">↑ Subir</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
