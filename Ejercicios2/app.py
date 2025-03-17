@@ -2,6 +2,7 @@ import re
 from flask import Flask, render_template, request
 from datetime import datetime
 import regresion
+import datasheet
 
 app = Flask(__name__)
 
@@ -35,6 +36,20 @@ def linearRegression():
         hours = float(request.form['hours'])
         calculateResult, image_base64 = regresion.calculateGrade(hours)
     return render_template("linearRegression.html", result = calculateResult, image = image_base64)
+
+@app.route('/linearRegressionAPI/', methods=['GET', 'POST'])
+def linearRegressionAPI():
+    prediction = None
+    plot_url = datasheet.generate_plot()
+
+    if request.method == 'POST':
+        try:
+            value = float(request.form['input_value'])
+            prediction = datasheet.predict_consumption(value)
+        except ValueError:
+            prediction = "Entrada no válida"
+
+    return render_template('datasheet.html', prediction=prediction, plot_url=plot_url)
 
 if __name__ == '__main__':
     app.run(debug=True)
